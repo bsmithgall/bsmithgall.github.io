@@ -1,0 +1,9 @@
+auto: true
+server: false
+markdown: rdiscount
+permalink: /blog/:title
+baseurl: /
+rdiscount extensions: [smart]
+paginate: 5
+future: false
+pygments: true
