@@ -66,7 +66,7 @@ nav li {
 
 nav a {
   display:inline-block;
-  width:198px;
+  width:197px;
   text-align:center;
   text-decoration:none;
   line-height:40px;
@@ -305,16 +305,11 @@ footer {
   body {
     padding:15px;
   }
-
-  header ul {
-    width:100%;
-  }
   
 }
 
 @media print, screen and (max-height: 480px) {
   footer{
-      position:fixed;
       bottom:0px;
   }
 
