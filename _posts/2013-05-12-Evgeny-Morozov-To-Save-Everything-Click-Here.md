@@ -2,7 +2,7 @@
 layout: post
 category: blog
 title: To Save Everything Click Here
-excerpt: Notes
+excerpt: Evegency Morozov's New Book is an interesting problemitization of a lot of current thinking in tech. I take a look at what he has to say about open government and open data.
 ---
 
 #{{ page.title }}
