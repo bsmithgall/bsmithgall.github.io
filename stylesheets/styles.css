@@ -2,7 +2,8 @@
 
 body {
   padding:.2in;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
   font-weight:400;
 }
 

@@ -23,7 +23,8 @@ title: Home
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
     <title>Ben Smithgall</title>
-    
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/stylesheets/styles.css">
     <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -54,7 +55,7 @@ title: Home
 	  <p>I do analytics for Spotify. I used to do data & digital analytics work for Obama 2012.</p>
 	</header>
 	<footer>
-	  <small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, <a href="www.example.com">Markdown</a>, and <a href="http://pages.github.com">GitHub. </a></small> <br>
+	  <small>Hosted with <a href="https://github.com/mojombo/jekyll">Jekyll</a> on <a href="http://pages.github.com">GitHub </a> <br>Original Theme by <a href="https://github.com/orderedlist">orderedlist</a></small>.<br>
 	  <small><a href="/">Home.</a> <a href="/blog">Blog.</a> <a href="/projects">Projects.</a></small>
 	</footer>
       </div>
@@ -66,8 +67,11 @@ title: Home
 	  <ul id="Posts">
 	    {% for post in site.posts %}
 	    <li><p><a href="{{ post.url }}">{{ post.title }}</a> - <abbr>{{ post.date | date_to_string | limit 5}}</abbr></p>
-	      <p>{{ post.excerpt }}</p>
-	    <p><a href="{{ post.url }}">read more...</a></p></li>
+	      <p>
+		{{ post.excerpt }} <br>
+		<a href="{{ post.url }}">read more...</a>
+	      </p>
+	    </li>
 	    {% endfor %}
 	  </ul>
 	</div> 
