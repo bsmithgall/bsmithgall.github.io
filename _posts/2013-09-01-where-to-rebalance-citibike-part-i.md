@@ -13,7 +13,7 @@ As I talked about in my [previous post](bensmithgall.com/blog/citibike-thoughts)
 
 #### Scraping in R
 
-Parsing JSON with R is a bit silly, but I eventually came up with a decent solution that pulls in multiple fields from a decently nested JSON object without having to use either recursion or super inefficient R for loops:
+Parsing JSON with R is a bit silly, but I eventually came up with a decent solution that pulls in multiple fields from a decently nested JSON object without having to use either recursion or super inefficient R `for` loops:
 
 {% highlight r %}
 require('RCurl')
@@ -31,7 +31,7 @@ stations.list <- as.data.frame(matrix(unlist(
   )
 {% endhighlight %}
 
-One minor annoyance was that I ended up with a dataframe of factors, so I had to go through and manually convert them into something more friendly.
+One minor annoyance was that I ended up with a dataframe of factors (as opposed to numerics or character vectors), so I had to go through and manually convert them into something more friendly.
 
 #### Clustering mostly empty stations
 
@@ -61,3 +61,5 @@ plot(stations.cluster$long, stations.cluster$lat, pch=19,
 {% endhighlight %}
 
 ![Geographic clusters of low-bike stations (2013-08-31 03:55:01 PM)]({{ site.url }}/images/2013-09-01-empty-geo-clusters.png)
+
+And there it is -- a super basic visualization of the geographic clusters of missing bikes. The next step is to figure out how to translate those clusters into graphs (with distances as weights), and then figure out the most central point of those graphs.
