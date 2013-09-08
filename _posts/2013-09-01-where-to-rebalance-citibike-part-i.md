@@ -35,7 +35,7 @@ One minor annoyance was that I ended up with a dataframe of factors (as opposed 
 
 #### Clustering mostly empty stations
 
-I decided to try out kmeans clustering as it generally performs well. One small problem is that the algorithm requires the user to input the number of clusters. In order to examine the clusters, I used the standard practice of looking at the within groups sum of square and choosing the number of clusters where there appeared to be an "elbow" which in this case was around four (using only slightly modified code from [here](http://www.statmethods.net/advstats/cluster.html):
+I decided to try out kmeans clustering as it generally performs well. One small problem is that the algorithm requires the user to input the number of clusters. In order to examine the clusters, I used the standard practice of looking at the within groups sum of square and choosing the number of clusters where there appeared to be an "elbow" which in this case was around four (using only slightly modified code from [here](http://www.statmethods.net/advstats/cluster.html)):
 
 {% highlight r %}
 wss <- (nrow(stations.tocluster)-1)*sum(apply(stations.tocluster,2,var))
