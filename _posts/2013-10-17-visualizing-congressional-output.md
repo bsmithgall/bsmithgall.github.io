@@ -123,7 +123,7 @@ function billsPassed(data, input, autosort) {
 billsPassed(billsandres, '#billsandresinput', true);
 </script><br>
 
-This, of course, gets a lot worse if you only consider the Bills. With the exception of Joint Resolutions, a resolution is not submitted to the President and therefore lacks the force of law. For more information about different types of Bills and Resolutions, check out the [the Senate's web site](http://www.senate.gov/reference/glossary_term/concurrent_resolution.htm).
+This, of course, gets a lot worse if you only consider the Bills. With the exception of Joint Resolutions, a resolution is not submitted to the President and therefore lacks the force of law. For more information about different types of Bills and Resolutions, check out the [Senate's web site](http://www.senate.gov/reference/glossary_term/concurrent_resolution.htm).
 
 <label style="font-size: 9px"><input type="checkbox" id="billsonlyinput">Order by Bills Passed</label>
 <script>
