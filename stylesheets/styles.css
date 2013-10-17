@@ -323,3 +323,22 @@ footer {
     color:#444;
   }
 }
+
+.bar {
+  stroke:white;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke-width: 1.5px;
