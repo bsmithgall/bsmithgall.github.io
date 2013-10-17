@@ -136,3 +136,5 @@ So what do we learn from all of this?
 Well, a few interesting things stick out immediately. First, in the past twenty or so years, Congress has spent a lot more time passing non-binding resolutions than they have legislation. Additionally, it doesn't really seem to matter if one party is in charge of both houses, or if they are split; there is still an overall lackluster Congressional performance. As for the 113th Congress, things aren't looking so good at all. Assuming that they stay on their current pace, they are only set to pass 115 pieces of actual legislation (while they will express their non-binding positions an additional 700 times through resolutions). 
 
 Note: I hope to post the D3 code that built this to a Github Gist/bl.ocks page in the coming days. I'll update this post when I do so.
+
+Update: The code is available [here](http://bl.ocks.org/bsmithgall/7033944)
