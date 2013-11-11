@@ -123,4 +123,4 @@ plot(g, layout=l, vertex.size=8, vertex.label=NA, edge.arrow.size=.1,
 ![Closeness Centrality]({{ site.url }}/images/2013-09-07-closeness-centrality.png)
 Looking at this graph, we see that the closeness meausre looks to actually lend itself towards favoring nodes that "connect" the larger parts of the graph. Because of this, it seems as though the conceptually simple degree centrality measure is the better choice going forward.
 
-Now that we have our clusters and our centrality measure, there are only two remaining steps: use the network analysis talked about in this post to highlight the central nodes on a station map, and integrate the predictive modeling done over at [DSSG](https://github.com/dssg/bikeshare). Look for these to be covered in future posts!
+Now that we have our clusters and our centrality measure, all we have to do is parse out the data from the graph structure and nicely wrap up the results. Look for these in future posts!
