@@ -5,10 +5,6 @@ title: To Save Everything Click Here
 excerpt: Evegency Morozov's New Book is an interesting problemitization of a lot of current thinking in tech. I take a look at what he has to say about open government and open data.
 ---
 
-#{{ page.title }}
-#####{{ page.date | date: "%d %B %Y" }}
-<hr>
-
 Evgeny Morozov's new book, "To Save Everything, Click Here" is certainly worth reading, if for no other reason than it occupies a much-needed space in pop-technology books of railing against technology as a solution to every possible problem. In the book, Morozov tackles numerous interesting problems with some current thinking in the technology space. There's too much for me to think about in this post, and so I mostly want to focus on his third chapter, titled "So Open It Hurts" which focuses on open government and open data. He has two primary points that I want to talk about: his discussion of open data/open government as ideology, and the tools and that can result from this open data.
 
 ####Government as an Ideology

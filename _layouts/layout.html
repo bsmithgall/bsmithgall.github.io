@@ -1,8 +1,11 @@
+---
+layout: none
+---
 <!DOCTYPE HTML>
 
 <html>
   <head>
-
+    <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="author" content="Ben" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -16,7 +19,23 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <title>{{ site.name }}</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS"
+    href="http://bensmithgall.com/feed.xml">
   </head>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39860123-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
 
   <body>
     <div class="wrapper">
@@ -43,7 +62,7 @@
 
 	<footer>
 	  <small>Hosted with <a href="https://github.com/mojombo/jekyll">Jekyll</a> on <a href="http://pages.github.com">GitHub </a> <br>Original Theme by <a href="https://github.com/orderedlist">orderedlist</a></small>.<br>
-	  <small><a href="/">Home.</a> <a href="/blog">Blog.</a> <a href="/projects">Projects.</a></small>
+	  <small><a href="/">Home.</a> <a href="/blog">Blog.</a> <a href="/projects">Projects.</a> <a href="/feed.xml">RSS.</a></small>
 	</footer>
       </div>
       <div class="content-box">
@@ -53,4 +72,5 @@
       </div>
     </div>
   </body>
+  <script src="/javascripts/scale.fix.js"></script>
 </html>

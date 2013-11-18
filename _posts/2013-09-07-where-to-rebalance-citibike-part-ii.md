@@ -4,11 +4,6 @@ title: Station clusters as network graphs
 excerpt: Now that we have geographic station clusters, the next step is to transform the cluster into a graph and to examine that graph.
 ---
 
-#{{ page.title }}
-#####{{ page.date | date: "%d %B %Y" }}
-
-<hr>
-
 Picking up from the [previous post](http://bensmithgall.com/blog/where-to-rebalance-citibike-part-i/), the next step of the [original plan](http://bensmithgall.com/blog/citibike-thought) is to represent the station clusters that we built as a network graph.
 
 #### Exploding each cluster
