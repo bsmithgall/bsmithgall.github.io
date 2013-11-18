@@ -4,11 +4,6 @@ title: Some Thoughts About Citibike
 excerpt: Just got back from a Citibike hack night, and I wanted to jot some things down while I still remember them.
 ---
 
-#{{ page.title }}
-#####{{ page.date | date: "%d %B %Y" }}
-
-<hr>
-
 One of the more problematic elements from any bike sharing program's point of view is the concept of "rebalancing." What this means is that bikes need to shuttled between stations in such a way that bikes are available at any given station at any given time. There have been several interesting approaches to this, and I think the best I've seen has been from the [Data Science for Social Good](https://github.com/dssg/bikeshare) organization, who have put out a really cool way of predicting which bike stations will be low 60 minutes from now.
 
 Something I learned at the hack night tonight is that in New York City, empty stations tend to cluster together (you can see a pretty good visualization [here](http://www.bkeyes.com/maps/citibike_heatmap.html)). This got me thinking about two things.

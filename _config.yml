@@ -1,3 +1,6 @@
+name: Ben Smithgall's site
+description: I do analytics for Spotify. I used to do data and digital analytics work for Obama 2012.
+url: http://bensmithgall.com
 auto: true
 server: false
 markdown: rdiscount
@@ -5,5 +8,6 @@ permalink: /blog/:title
 baseurl: /
 rdiscount extensions: [smart]
 paginate: 5
+paginate_path: "/blog/page:num"
 future: false
 pygments: true

@@ -4,10 +4,6 @@ title: A Bit About Bioshock Infinite
 excerpt: Bioshock Infinite's ambitious and impressive story pays off -- the game makes me think about the nature of change.
 ---
 
-#{{ page.title }}
-#####{{ page.date | date: "%d %B %Y" }}
-<hr>
-
 *Warning: spoilers.*
 
 Bioshock Infinite is a masterpiece. Its story is complex and difficult, its characters interesting and challenging, and its art style [truly beautiful](http://assets2.ignimgs.com/2012/12/07/tcvistaonlinejpg-8435c8.jpg).

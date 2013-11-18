@@ -4,11 +4,6 @@ title: Wrapping up the R scripts for Citibike
 excerpt: Now that the heavy lifting is finished from the R script, all that's left is to return out the results and clean up the script.
 ---
 
-#{{ page.title }}
-#####{{ page.date | date: "%d %B %Y" }}
-
-<hr>
-
 At the end of [the second part](http://bensmithgall.com/blog/where-to-rebalance-citibike-part-ii/) of the Citibike rebalancing problem, we had visualized a network of a cluster of citibike stations and left off with noting that the final steps involved extracting the information from the graph data and packaging it up for delivery.
 
 The first step in doing this is to extract the information from the network graph. The following function both gets the graph data from an input dataframe and returns the necessary information from that graph.
