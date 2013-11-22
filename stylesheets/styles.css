@@ -159,7 +159,7 @@ header ul {
   padding:0;
   border-radius:5px;
   width:270px;
-  margin-bottom:30px;
+  margin-bottom:10px;
 }
 
 header li {
@@ -167,6 +167,7 @@ header li {
   float:left;
   height:42px;
   margin-right:6px;
+  padding-right:6px;
 }
 
 header ul a {
