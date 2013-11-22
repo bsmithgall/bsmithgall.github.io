@@ -76,7 +76,7 @@ Additionally, I didn't need a lot of the advanced features that come bundled in 
 
 A central component to this visualization was going to be the map. I decided to make the map fullscreen, and layer information on top of it. [Mapbox](http://mapbox.com) and [mapbox.js](http://mapbox.com/mapbox.js/) (which is an extension of the already great library [Leaflet](http://leafletjs.com)) were good choices for me in this case. Mapbox produces beautiful maps.
 
-Another big advantage that came from rewriting the script in python was that it made it trivial to look at both empty and full stations, so I decided to display both of them.
+Another big advantage that came from rewriting the script in python was that it made it trivial to look at both empty and full stations, so I decided to display both.
 
 ####First impressions and takeaways
 
