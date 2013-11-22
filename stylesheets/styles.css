@@ -75,7 +75,7 @@ nav a {
 }
 
 .topnav {
-  margin-bottom:10px;
+  margin-bottom:20px;
 }
 
 .topnav:before,
@@ -159,14 +159,14 @@ header ul {
   padding:0;
   border-radius:5px;
   width:270px;
-  padding-bottom:10px;
+  margin-bottom:30px;
 }
 
 header li {
   width:42px;
   float:left;
   height:42px;
-  padding-right:6px;
+  margin-right:6px;
 }
 
 header ul a {
@@ -326,3 +326,9 @@ footer {
 .line {
   fill: none;
   stroke-width: 1.5px;
+}
+
+.img-container {
+  width:100px;
+  height:80px;
+}
