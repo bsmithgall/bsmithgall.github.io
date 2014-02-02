@@ -1,0 +1,267 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+  <head>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  </head>
+  <body>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 11px;
+    }
+    .title {
+      text-align:center;
+      padding-top:20px;
+    }
+    .axis path, .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+      }
+    .x.axis path {
+      display: none;
+    }
+    .y.axis path {
+      display: none;
+    }
+    .line {
+      fill: none;
+      stroke: steelblue;
+      stroke-width: 3px;
+      opacity: .3;
+      -webkit-filter: grayscale(100%);
+    }
+    .line-clicked {
+      fill: none;
+      stroke: steelblue;
+      stroke-width: 5px;
+      opacity: .9;
+      -webkit-filter: grayscale(100%);      
+    }
+    .circle-clicked {
+      stroke: black;
+      stroke-width: 2px;
+    }
+    div.legend-info {
+        margin-top: 100px;
+        position: relative;
+        text-align: center;
+        min-height: 320px;
+        min-width: 320px;
+        height: auto;
+        padding: 2px;
+        font: 14px sans-serif;
+        border: 0px;
+        border-radius: 8px;
+    }
+    footer {
+        padding-top:20px;
+        padding-left:20px;
+        float:left;
+    }
+  </style>
+  <div class="container">
+    <div class="row">
+      <div class="title">
+        <h4>Spotify Charts</h4>
+        <p>The circles represent track positions in a different week. Click on one for more information. <br />
+          For more information about this visualization, read about it <a href="{{ site.url }}/blog/line-graphs-with-d3-interpolate/">here</a></p>
+      </div>
+      <div class="col-md-8" id="graphic">
+      </div>
+      <div class="col-md-4" id="legend">
+        <div class="legend-info">
+        </div>
+      </div>
+    </div>
+    <footer>
+      <small>Hosted with <a href="https://github.com/mojombo/jekyll">Jekyll</a> on <a href="http://pages.github.com">GitHub </a> <br>Original Theme by <a href="https://github.com/orderedlist">orderedlist</a></small>.<br>
+      <small><a href="/">Home.</a> <a href="/blog">Blog.</a> <a href="/projects">Projects.</a> <a href="/feed.xml">RSS.</a></small>
+    </footer>
+  </div>
+
+    <script>
+    var margin = {top: 20, right: 10, bottom: 35, left: 50},
+        width     = 680 - margin.left - margin.right,
+        height    = 500 - margin.top - margin.bottom;
+
+    var parseDate = d3.time.format('%Y-%m-%d').parse;
+
+    var x = d3.time.scale()
+            .range([0, width]);
+
+    var y = d3.scale.linear()
+            .range([height, 0]);
+
+    var color = d3.scale.category20b();
+
+    var xAxis = d3.svg.axis()
+                  .scale(x)
+                  .orient('bottom');
+
+    var yAxis = d3.svg.axis()
+                  .scale(y)
+                  .orient('left')
+                  .tickFormat(function(d) { return Math.abs(d); });
+
+    var line = d3.svg.line()
+                 .interpolate('monotone')
+                 .x(function(d) { 
+                  return x(d.date); 
+                })
+                 .y(function(d) { return y(d.rank); });
+
+    var div = d3.select('.legend-info');
+
+    var svg = d3.select('#graphic').append('svg')
+                .attr('wdith', width + margin.left + margin.right)
+                .attr('height', height + margin.top + margin.bottom)
+              .append('g')
+                .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+    d3.json('/javascripts/json/charts.json', function(data) {
+      drawChart(data)
+    })
+
+    var drawChart = function(rawdata) {
+      data = cleanData(rawdata);
+
+      color.domain(data.map(function(d){ return d.track }));
+
+      data.forEach(function(kv){
+        kv.data.forEach(function(d) {
+          d.date = parseDate(d.date);
+        })
+      });
+
+      var ranks = data;
+
+      var minX = d3.min(data, function (kv) { return d3.min(kv.data, function (d) { return d.date; }) });
+      var maxX = d3.max(data, function (kv) { return d3.max(kv.data, function (d) { return d.date; }) });
+      // var minY = d3.min(data, function (kv) { return d3.min(kv.data, function (d) { return d.rank; }) });
+      // var maxY = d3.max(data, function (kv) { return d3.max(kv.data, function (d) { return d.rank; }) });
+      var minY = -10
+      var maxY = -1
+
+      x.domain([minX, maxX]);
+      y.domain([minY, maxY]);
+
+      var rank = svg.selectAll('.rank')
+                  .data(ranks)
+                  .enter().append('g')
+                  .attr('class', 'rank')
+
+      rank.append('path')
+          .attr('class', function(d) { 
+            return 'line ' + d.data[0].track_class + 'Line'; 
+          })
+          .attr('d', function(d) { return line(d.data); })
+          .style('stroke', function(d) { return color(d.name); });
+
+      rank.selectAll('circle')
+          .data(function(d) { return d.data; })
+          .enter().append('circle')
+          .attr('cx', function(d) { return x(d.date); })
+          .attr('cy', function(d) { return y(d.rank); })
+          .attr('r', 5)
+          .attr('fill', function(d) { return color(d.name); })
+          .attr('class', function(d) { return d.track_class + 'Circle'; })
+          .on('click', function(d) { 
+            clicked(d)
+          }); 
+
+      svg.append('g')
+          .attr('class', 'x axis')
+          .attr('transform', 'translate(0,' + height + ')')
+          .call(xAxis)
+            .selectAll('text')
+            .style('text-anchor', 'end')
+            .attr('dx', '-.8em')
+            .attr('dy', '.15em')
+            .attr('transform', function(d) { return 'rotate(-25)'; });;
+
+      svg.append('g')
+          .attr('class', 'y axis')
+          .call(yAxis)
+
+    }
+
+    var clicked = function(data) {
+      div.transition()
+          .duration(0)
+          .style("opacity", 1);
+      d3.selectAll('.line-clicked').classed('line-clicked', false);
+      d3.selectAll('.circle-clicked').classed('circle-clicked', false);
+      d3.selectAll('.' + data.track_class + 'Line').classed('line-clicked', true);
+      d3.selectAll('.' + data.track_class + 'Circle').classed('circle-clicked', true);
+      div.html('<div><a target="_blank" href="' + data.url + '"><img src="' + data.cover_art + '" alt="' + data.name + '" /></a>' + 
+        '<br><span>' + data.name + '<br>' + data.streams + ' streams</span></div>'
+        )
+    }
+
+    var cleanData = function(data) {
+      var tracks = {};
+  
+      for (var day in data) {
+        data[day].tracks.forEach(function(track, index) {
+          if (index < 50) {
+              var track_key = track.track_name + ' - ' + track.artist_name
+              var track_class = track.track_name + track.artist_name
+              // If track hasn't been seen yet add it in
+              if (!tracks[track_key]) {
+                  tracks[track_key] = {
+                      name: track_key,
+                      data: [],
+                  };
+              }
+              
+              // Add this data to the track
+              tracks[track_key].data.push({
+                  date: track.date,
+                  streams: numberWithCommas(track.num_streams),
+                  artist_name: track.artist_name,
+                  rank: (index + 1) * -1,
+                  url: track.track_url,
+                  cover_art: track.artwork_url,
+                  name: track_key,
+                  track_class: track_class.replace(/ /g,'').replace(/ [\,\/#!$%\^&\*;:{}=\-_`~()\'\.]/g,'') // strip out punctuation and spaces
+              });
+          }
+        });
+      }
+      // Now it is in URL -> { name -> String, data -> Array format }
+      
+      // Now we want to go to [{name -> String, data -> Array }, ...]
+      var result = [];
+      Object.keys(tracks).forEach(function(url) {
+        result.push(tracks[url]);
+      });
+
+      function resultSort(a, b) {
+        if (a.date < b.date) return -1;
+        if (a.date > b.date) return 1;
+        return 0;
+      }
+
+      result.forEach(function(d) { return d.data.sort(resultSort) });
+      return result
+    };
+
+    function numberWithCommas(x) {
+      try {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      }
+      catch (TypeError) {
+        return 0;
+      }
+    }
+
+    </script>
+  </body>
+</html>
