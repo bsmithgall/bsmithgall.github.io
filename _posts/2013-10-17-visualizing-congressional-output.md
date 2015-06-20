@@ -13,11 +13,13 @@ Some quick background: a session of Congress lasts for two years, and we are alm
 Using the fantastic [Govtrack](https://www.govtrack.us/developers/api) and [New York Times](http://developer.nytimes.com/docs/congress_api) APIs, I pulled together the following visualizations of Congressional efficiency over time. First, I looked at the total amount of legislation that passed through both chambers of Congress, including Bills, Resolutions, Join Resolutions, Signed Bills ([Laws](http://www.youtube.com/watch?v=tyeJ55o3El0)), Vetoed Bills, and Overturned Vetoes. So basically anything that passed through both houses:
 
 <label style="font-size: 9px"><input type="checkbox" id="billsandresinput">Order by Bills and Resolutions Passed</label>
+
 <p id="billsAndRes"></p>
 
 This, of course, gets a lot worse if you only consider the Bills. With the exception of Joint Resolutions, a resolution is not submitted to the President and therefore lacks the force of law. For more information about different types of Bills and Resolutions, check out the [Senate's web site](http://www.senate.gov/reference/glossary_term/concurrent_resolution.htm).
 
 <label style="font-size: 9px"><input type="checkbox" id="billsonlyinput">Order by Bills Passed</label>
+
 <p id="billsOnly"></p>
 
 So what do we learn from all of this?
@@ -31,6 +33,7 @@ Update: The code is available [here](http://bl.ocks.org/bsmithgall/7033944)
 Second update (19 October). I've gone through and manually looked up the controlling parties for the houses of Congress. I didn't realize that Democrats controlled both houses between the 84th Congress (started meeting in 1955) and the 95th Congress (started meeting in 1977). I was also curious about the gap between the number of Bills & Resolutions passed and the number of only Bills passed. The chart below graphs that gap over time.
 
 <label style="font-size: 9px"><input type="checkbox" id="gap">Order by Size of Difference</label>
+
 <p id="gapContainer"></p>
 
 Whoa. What happened in the [93rd Congress](http://en.wikipedia.org/wiki/93rd_United_States_Congress)? Nixon resigned during the period, but I'm not totally sure what would have caused there to be such a huge spike in non-binding resolutions. If you have any insight about why this might be, let me know! I'd definitely be interested.
