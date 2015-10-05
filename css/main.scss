@@ -1,0 +1,14 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+$icon-height: 24px;
+$icon-container-height: $icon-height * 1.4;
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "bootstrap",
+        "pygment_trac",
+        "styles"
+;
