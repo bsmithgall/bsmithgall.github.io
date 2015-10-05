@@ -4,7 +4,7 @@ title: Wrapping up the R scripts for Citibike
 excerpt: Now that the heavy lifting is finished from the R script, all that's left is to return out the results and clean up the script.
 ---
 
-At the end of [the second part](http://bensmithgall.com/blog/where-to-rebalance-citibike-part-ii/) of the Citibike rebalancing problem, we had visualized a network of a cluster of citibike stations and left off with noting that the final steps involved extracting the information from the graph data and packaging it up for delivery.
+At the end of [the second part]({{ site.url }}/blog/where-to-rebalance-citibike-part-ii/) of the Citibike rebalancing problem, we had visualized a network of a cluster of citibike stations and left off with noting that the final steps involved extracting the information from the graph data and packaging it up for delivery.
 
 The first step in doing this is to extract the information from the network graph. The following function both gets the graph data from an input dataframe and returns the necessary information from that graph.
 
@@ -14,10 +14,10 @@ get.graph.data <- function(single.cluster) {
   cluster.graph2 <- graph.explode(single.cluster)
   g2 <- graph.data.frame(cluster.graph2)
   V(g2)$degcent <- centralization.degree(g2)$res
-  
+
   q2 <- as.data.frame(as.numeric(as.matrix(V(g2)$name)))
   q2$v2<-as.matrix(V(g2)$degcent)
-  
+
   names(q2) <- c('id','degcent')
   q2<-q2[order(q2$id, decreasing=TRUE),]
   output <- merge(q2, single.cluster, by="id")
@@ -54,7 +54,7 @@ Once we have this information, we can go ahead and make our recommendations. In 
 make.recs <- function(graph.data, dists) {
   i <- 1
   close <- data.frame(check = numeric(0))
-  results <- data.frame(id = numeric(0), name = character(0), 
+  results <- data.frame(id = numeric(0), name = character(0),
                         available = numeric(0), total = numeric(0),
                         stringsAsFactors=FALSE)
   comb <- merge(graph.data, dists, by="id")
@@ -85,7 +85,7 @@ main <- function() {
   stations.tocluster <- stations.prep(stations.url)
   stations.cluster <- stations.kmeans(stations.tocluster)
   dists <- get.dists(dist.url)
-  output <- data.frame(id = numeric(0), name = character(0), 
+  output <- data.frame(id = numeric(0), name = character(0),
                         available = numeric(0), total = numeric(0),
                         stringsAsFactors=FALSE)
   for(i in 1:4) {
@@ -95,7 +95,7 @@ main <- function() {
   }
   return(output)
 }
-  
+
 main()
 {% endhighlight %}
 

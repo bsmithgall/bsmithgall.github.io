@@ -4,7 +4,7 @@ title: Station clusters as network graphs
 excerpt: Now that we have geographic station clusters, the next step is to transform the cluster into a graph and to examine that graph.
 ---
 
-Picking up from the [previous post](http://bensmithgall.com/blog/where-to-rebalance-citibike-part-i/), the next step of the [original plan](http://bensmithgall.com/blog/citibike-thought) is to represent the station clusters that we built as a network graph.
+Picking up from the [previous post]({{ site.url }}/blog/where-to-rebalance-citibike-part-i/), the next step of the [original plan]({{ site.url }}/blog/citibike-thought) is to represent the station clusters that we built as a network graph.
 
 #### Exploding each cluster
 
@@ -14,7 +14,7 @@ The first step here is to explode out each cluster into a data format that can b
 graph.explode <- function(x) {
   y <- data.frame(
     t(apply(
-      combn(paste(row.names(x), x[,1], x[,2], sep=","), 2), 2, 
+      combn(paste(row.names(x), x[,1], x[,2], sep=","), 2), 2,
       function(i){
         i.names <- unlist(strsplit(as.character(i), split='\\,'))
         latslongs <- c(as.numeric(i.names[2]),as.numeric(i.names[3]),
@@ -29,7 +29,7 @@ graph.explode <- function(x) {
   # distances than half a mile (~.8 km)
   y <- y[y[,3] < .8,]
   return(y)
-} 
+}
 {% endhighlight %}
 
 This function is a bit complex, so let's map out what exactly is going on here. The function takes in a	`data.frame` whose row names are station names and that has a column of latitudes and one of longitudes. The `combn` function then returns a 2 x n matrix where n is the number of combinations. I then use an `apply` function to calculate the [Haversine distance](http://en.wikipedia.org/wiki/Haversine_formula) between those two points. The `haversine.distance` function is given as:
@@ -54,7 +54,7 @@ haversine.distance <- function(long1, lat1, long2, lat2) {
   lat1 <- degrees.to.radians(lat1)
   long2 <- degrees.to.radians(long2)
   lat2 <- degrees.to.radians(lat2)
-  
+
   return(haversine(long1, lat1, long2, lat2))
 }
 {% endhighlight %}
@@ -63,7 +63,7 @@ Once I get the haversine distance between every combination of points, I simply 
 
 #### Stations as a graph
 
-Now that we have the data in a form that can be represented as a network graph, we can go ahead and use the wonderful [`igraph`](http://igraph.sourceforge.net/) package to plot network representation andperform calculations. Note that for the rest of the post, I am using one of the four clusters identified in the last post. 
+Now that we have the data in a form that can be represented as a network graph, we can go ahead and use the wonderful [`igraph`](http://igraph.sourceforge.net/) package to plot network representation andperform calculations. Note that for the rest of the post, I am using one of the four clusters identified in the last post.
 
 First, let's load up the data and plot it to see what it looks like:
 
@@ -111,7 +111,7 @@ V(g)$closecent <- centralization.closeness(g, mode="all")$res
 cl.comps <- V(g)$closecent
 cl.colbar <- cm.colors(max(round(cl.comps*100))+1)
 V(g)$color <- cl.colbar[round(cl.comps*100)+1]
-  
+
 plot(g, layout=l, vertex.size=8, vertex.label=NA, edge.arrow.size=.1,
      main='Station Closeness Centrality')
 {% endhighlight %}

@@ -4,7 +4,7 @@ title: Getting Started with Citibike Rebalancing
 excerpt: Scraping the data, finding stations of interest, and grouping them with R.
 ---
 
-As I talked about in my [previous post](bensmithgall.com/blog/citibike-thoughts), I want to put together a system that will help Citibike by showing the best stations that they can rebalance. I've decided that I'm probably going to leave the future station prediction up to the models built over at [DSSG](https://github.com/dssg/bikeshare) and work on what we can do after we can predict how stations will look in 30 or 60 minutes.
+As I talked about in my [previous post]({{ site.url }}/blog/citibike-thoughts), I want to put together a system that will help Citibike by showing the best stations that they can rebalance. I've decided that I'm probably going to leave the future station prediction up to the models built over at [DSSG](https://github.com/dssg/bikeshare) and work on what we can do after we can predict how stations will look in 30 or 60 minutes.
 
 #### Scraping in R
 
@@ -34,7 +34,7 @@ I decided to try out kmeans clustering as it generally performs well. One small 
 
 {% highlight r %}
 wss <- (nrow(stations.tocluster)-1)*sum(apply(stations.tocluster,2,var))
-for (i in 2:15) wss[i] <- sum(kmeans(stations.tocluster, 
+for (i in 2:15) wss[i] <- sum(kmeans(stations.tocluster,
                                      centers=i)$withinss)
 plot(1:15, wss, type="b", xlab="Number of Clusters",
      ylab="Within groups sum of squares")

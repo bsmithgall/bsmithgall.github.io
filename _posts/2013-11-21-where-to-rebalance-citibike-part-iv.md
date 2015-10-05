@@ -6,7 +6,7 @@ excerpt: In order to deploy the recently finished script that gives rebalancing 
 
 First things first: the rebalancing app is live, and it can be found [here](http://citibike-rebalancing.herokuapp.com).
 
-Now that we've [wrapped up](http://bensmithgall.com/blog/where-to-rebalance-citibike-part-iii/) the script that generates station recommendations for rebalancing, we want to visualize this information to make it more digestible. Unfortunately (or maybe fortunately...), R is not a great language for dealing with browsers. Python, however, offers a variety of lightweight web frameworks that make this problem far less challenging.
+Now that we've [wrapped up]({{ site.url }}/blog/where-to-rebalance-citibike-part-iii/) the script that generates station recommendations for rebalancing, we want to visualize this information to make it more digestible. Unfortunately (or maybe fortunately...), R is not a great language for dealing with browsers. Python, however, offers a variety of lightweight web frameworks that make this problem far less challenging.
 
 ####From R to python
 
@@ -70,7 +70,7 @@ def make_recs(graph_output, dist_url):
 
 ####Serving the results as a web app
 
-Because the current iteration of this doesn't store any data or do any database writing, I decided to deploy the app with [Heroku](http://heroku.com), an awesome service that does some free deployment. 
+Because the current iteration of this doesn't store any data or do any database writing, I decided to deploy the app with [Heroku](http://heroku.com), an awesome service that does some free deployment.
 
 Additionally, I didn't need a lot of the advanced features that come bundled in with [Django](https://www.djangoproject.com/), so I opted to use [Flask](http://flask.pocoo.org). Flask is very lightweight and handles my needs perfectly for this use case. You can find the finished product [here](http://citibike-rebalancing.herokuapp.com).
 
