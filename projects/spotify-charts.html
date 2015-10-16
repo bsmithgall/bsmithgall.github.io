@@ -1,5 +1,4 @@
 ---
-layout: none
 ---
 <!DOCTYPE html>
 <html xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
@@ -42,7 +41,7 @@ layout: none
       stroke: steelblue;
       stroke-width: 5px;
       opacity: .9;
-      -webkit-filter: grayscale(100%);      
+      -webkit-filter: grayscale(100%);
     }
     .circle-clicked {
       stroke: black;
@@ -81,12 +80,12 @@ layout: none
       </div>
     </div>
     <footer>
-      <small>Hosted with <a href="https://github.com/mojombo/jekyll">Jekyll</a> on <a href="http://pages.github.com">GitHub </a> <br>Original Theme by <a href="https://github.com/orderedlist">orderedlist</a></small>.<br>
+      <small>Hosted with <a href="https://github.com/mojombo/jekyll">Jekyll</a> on <a href="http://pages.github.com">GitHub </a></small> <br>
       <small><a href="/">Home.</a> <a href="/blog">Blog.</a> <a href="/projects">Projects.</a> <a href="/feed.xml">RSS.</a></small>
     </footer>
   </div>
 
-    <script>
+  <script>
     var margin = {top: 20, right: 10, bottom: 35, left: 50},
         width     = 680 - margin.left - margin.right,
         height    = 500 - margin.top - margin.bottom;
@@ -112,15 +111,15 @@ layout: none
 
     var line = d3.svg.line()
                  .interpolate('monotone')
-                 .x(function(d) { 
-                  return x(d.date); 
+                 .x(function(d) {
+                  return x(d.date);
                 })
                  .y(function(d) { return y(d.rank); });
 
     var div = d3.select('.legend-info');
 
     var svg = d3.select('#graphic').append('svg')
-                .attr('wdith', width + margin.left + margin.right)
+                .attr('width', width + margin.left + margin.right)
                 .attr('height', height + margin.top + margin.bottom)
               .append('g')
                 .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
@@ -158,8 +157,8 @@ layout: none
                   .attr('class', 'rank')
 
       rank.append('path')
-          .attr('class', function(d) { 
-            return 'line ' + d.data[0].track_class + 'Line'; 
+          .attr('class', function(d) {
+            return 'line ' + d.data[0].track_class + 'Line';
           })
           .attr('d', function(d) { return line(d.data); })
           .style('stroke', function(d) { return color(d.name); });
@@ -172,9 +171,9 @@ layout: none
           .attr('r', 5)
           .attr('fill', function(d) { return color(d.name); })
           .attr('class', function(d) { return d.track_class + 'Circle'; })
-          .on('click', function(d) { 
+          .on('click', function(d) {
             clicked(d)
-          }); 
+          });
 
       svg.append('g')
           .attr('class', 'x axis')
@@ -200,14 +199,14 @@ layout: none
       d3.selectAll('.circle-clicked').classed('circle-clicked', false);
       d3.selectAll('.' + data.track_class + 'Line').classed('line-clicked', true);
       d3.selectAll('.' + data.track_class + 'Circle').classed('circle-clicked', true);
-      div.html('<div><a target="_blank" href="' + data.url + '"><img src="' + data.cover_art + '" alt="' + data.name + '" /></a>' + 
+      div.html('<div><a target="_blank" href="' + data.url + '"><img src="' + data.cover_art + '" alt="' + data.name + '" /></a>' +
         '<br><span>' + data.name + '<br>' + data.streams + ' streams</span></div>'
         )
     }
 
     var cleanData = function(data) {
       var tracks = {};
-  
+
       for (var day in data) {
         data[day].tracks.forEach(function(track, index) {
           if (index < 50) {
@@ -220,7 +219,7 @@ layout: none
                       data: [],
                   };
               }
-              
+
               // Add this data to the track
               tracks[track_key].data.push({
                   date: track.date,
@@ -236,7 +235,7 @@ layout: none
         });
       }
       // Now it is in URL -> { name -> String, data -> Array format }
-      
+
       // Now we want to go to [{name -> String, data -> Array }, ...]
       var result = [];
       Object.keys(tracks).forEach(function(url) {
