@@ -98,6 +98,15 @@ footer {
   float:left;
   position:fixed;
   bottom:50px;
+
+  @media screen and (max-width: $smaller-screen) {
+    padding-top: 25px;
+    width: 100%;
+    position: relative;
+  }
+
 }
+
+
 
 

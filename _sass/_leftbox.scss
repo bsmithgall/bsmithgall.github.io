@@ -46,6 +46,16 @@
         }
       }
     }
+
+
+    @media screen and (max-width: $smaller-screen) {
+      position: relative;
+      max-width: $leftbox-smaller-width;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      max-width: 100%;
+    }
   }
 
   ul {
@@ -54,4 +64,10 @@
     padding-left: 0;
     font-size: 16px;
   }
+
+  @media screen and (max-width: $smaller-screen) {
+    position: relative;
+    max-width: 100%;
+  }
+
 }

@@ -10,6 +10,7 @@ $light-color: #485E70;
 $overall-padding-top: 25px;
 
 $leftbox-width: 15%;
+$leftbox-smaller-width: 70%;
 $leftbox-left-padding: 25px;
 $leftbox-right-padding: 25px;
 $leftbox-padding-top: $overall-padding-top;
@@ -19,6 +20,9 @@ $content-box-top-padding: $overall-padding-top;
 
 $icon-height: 24px;
 $icon-container-height: $icon-height * 1.4;
+
+$mobile-screen: 480px;
+$smaller-screen: 800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

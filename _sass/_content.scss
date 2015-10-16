@@ -7,6 +7,29 @@
     margin-left: $leftbox-width/1.8;
     padding-bottom: 50px;
     max-width: 50%;
+
+    @media screen and (max-width: $smaller-screen) {
+      margin-left: 0;
+      padding-left: $leftbox-left-padding;
+      padding-right: $leftbox-right-padding;
+      max-width: $leftbox-smaller-width;
+
+      ul {
+        margin-left: -20px;
+      }
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      max-width: 100%
+    }
+
   }
+
+  @media screen and (max-width: $smaller-screen) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+  }
+
 
 }
