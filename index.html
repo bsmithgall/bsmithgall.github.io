@@ -2,47 +2,57 @@
 layout: layout
 title: Home
 ---
-	<div>
-	  <h1> Blog </h1>
-	  <ul id="Posts">
-	    {% for post in site.posts limit:5 %}
-	    <li>
+  <div>
+    <h1> Blog </h1>
+    <ul id="Posts">
+      {% for post in site.posts limit:5 %}
+      <li>
         <p><a href="{{ post.url }}">{{ post.title }}</a> - <abbr>{{ post.date | date_to_string }}</abbr></p>
-        <p>{{ post.excerpt }} <br> 
+        <p>{{ post.excerpt }} <br>
         <a href="{{ post.url }}">read more...</a></p>
-	    </li>
-	    {% endfor %}
-	  </ul>
+      </li>
+      {% endfor %}
+    </ul>
     <p>For older posts, check out the <a href="/blog">blog</a>.</p>
-	</div>
+  </div>
 
   <div>
-    <h1> Projects </h1>
-    <div class="media">
-      <a class="pull-left" href="http://citibike-rebalancing.herokuapp.com">
-        <div class="img-container"><img class="media-object" src="/images/citibike-proj.png" alt="..."></div>
+    <h1>Projects</h1>
+
+    <div class="project-thumb">
+      <a href="http://citibike-rebalancing.herokuapp.com">
+        <div class="project-thumb-img-container">
+          <div class="project-thumb-rebalancing"></div>
+          <div class="project-thumb-body">
+            <h4 class="project-thumb-title">Prioritizing Stations in Citibike Rebalancing</h4>
+            <p class="project-thumb-content">Tackling the problem of choosing which of the 330 Citibike stations should be prioritized.</p>
+          </div>
+        </div>
       </a>
-      <div class="media-body">
-        <h4 class="media-heading">Prioritizing Stations in Citibike Rebalancing</h4>
-        <p>Tackling the problem of choosing which of the 330 Citibike stations should be prioritized.</p>
-      </div>
     </div>
-    <div class="media">
-      <a class="pull-left" href="{{ site.url }}/projects/spotify-charts.html">
-        <div class="img-container"><img class="media-object" src="/images/spotify-charts-proj.png" alt="..."></div>
+
+    <div class="project-thumb">
+      <a href="{{ site.url }}/projects/spotify-charts.html">
+        <div class="project-thumb-img-container">
+          <div class="project-thumb-charts"></div>
+          <div class="project-thumb-body">
+            <h4 class="project-thumb-title">Visualizing Spotify's charts</h4>
+            <p class="project-thumb-content">Working with D3 Interpolation on Spotify Charts</p>
+          </div>
+        </div>
       </a>
-      <div class="media-body">
-        <h4 class="media-heading">Visualizing Spotify's charts</h4>
-        <p>Working with D3 Interpolation on Spotify Charts</p>
-      </div>
     </div>
-    <div class="media">
-      <a class="pull-left" href="{{ site.url }}/projects/citibike-trips.html">
-        <div class="img-container"><img class="media-object" src="/images/citibike-trips-viz.png" alt="..."></div>
+
+    <div class="project-thumb">
+      <a href="{{ site.url }}/projects/citibike-trips.html">
+        <div class="project-thumb-img-container">
+          <div class="project-thumb-citibike"></div>
+          <div class="project-thumb-body">
+            <h4 class="project-thumb-title">Visualizing Citibike Trips</h4>
+            <p class="project-thumb-content">Visualizing the Citibike station network using trips from February, 2014</p>
+          </div>
+        </div>
       </a>
-      <div class="media-body">
-        <h4 class="media-heading">Visualizing Citibike Trips</h4>
-        <p>Visualizing the Citibike station network using trips from February, 2014</p>
-      </div>
     </div>
+
   </div>

@@ -16,9 +16,6 @@ layout: none
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/main.css">
 
-    <script src="/javascripts/jquery.min.js"></script>
-    <script src="/javascripts/d3.v3.min.js"></script>
-    <script src="/javascripts/bootstrap.min.js"></script>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -26,44 +23,11 @@ layout: none
     <link rel="alternate" type="application/rss+xml" title="RSS"
     href="http://bensmithgall.com/feed.xml">
   </head>
-  <script type="text/javascript">
-
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-39860123-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-  </script>
 
   <body>
     <div class="wrapper">
-      <nav class="topnav">
-        <ul class="topnav">
-          <li><a href="/">Home.</a></li>
-          <li><a href="/blog">Blog.</a></li>
-          <li><a href="/projects">Projects.</a></li>
-        </ul>
-      </nav>
 
-      <div class="leftbox">
-        <header>
-          <h1>Ben Smithgall</h1>
-          <h5>Data, Politics, and Other Things</h5>
-          <ul>
-            <li><a target="_blank" alt="LinkedIn" title="LinkedIn Profile" href="http://linkedin.com/in/bsmithgall"><img src="/images/linkedin.png" /></a></li>
-            <li><a target="_blank" alt="Twitter" title="Follow me on Twitter" href="http://twitter.com/bsmithgall"><img src="/images/twitter.png" /></a></li>
-            <li><a target="_blank" alt="Github" title="Github" href="http://github.com/bsmithgall"><img src="/images/github.png" /></a></li>
-            <li><a target="_blank" alt="RSS" title="Get the RSS Feed" href="http://bensmithgall.com/feed.xml"><img src="/images/rss.png" /></a></li>
-          </ul>
-          <p>I'm a Code for America Fellow. I used to do Data & Engineering for Spotify and Obama 2012.</p>
-        </header>
-
-      </div>
+      {% include leftnav.html %}
 
       <div class="content-box">
         <section>
@@ -72,11 +36,28 @@ layout: none
       </div>
 
       <footer>
-        <small>Hosted with <a href="https://github.com/mojombo/jekyll">Jekyll</a> on <a href="http://pages.github.com">GitHub </a> <br>Original Theme by <a href="https://github.com/orderedlist">orderedlist</a></small>.<br>
-        <small><a href="/">Home.</a> <a href="/blog">Blog.</a> <a href="/projects">Projects.</a> <a href="/feed.xml">RSS.</a></small>
+        <small>
+        Hosted with <a href="https://github.com/mojombo/jekyll">Jekyll</a> on <a href="http://pages.github.com">GitHub </a><br />
+        </small>
       </footer>
 
     </div>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/d3.v3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script>
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-39860123-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
   </body>
-  <script src="/javascripts/scale.fix.js"></script>
 </html>

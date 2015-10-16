@@ -1,0 +1,12 @@
+.content-box {
+  margin-left: $leftbox-width;
+  padding-right: $content-box-padding;
+  padding-top: $content-box-top-padding;
+
+  section {
+    margin-left: $leftbox-width/1.8;
+    padding-bottom: 50px;
+    max-width: 50%;
+  }
+
+}

@@ -1,0 +1,103 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight:400;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin:0 0 20px;
+}
+
+p, ul, ol, table, pre, dl {
+  margin:0 0 20px;
+}
+
+h1, h2, h3 {
+  line-height:1.1;
+}
+
+h1 {
+  font-size:28px;
+}
+
+a {
+  color: $link-color;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:small {
+    font-size:11px;
+    margin-top:-0.6em;
+    margin-bottom:-.6em;
+    display:block;
+  }
+
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+blockquote {
+  border-left:1px solid #e5e5e5;
+  margin:0;
+  padding:0 0 0 20px;
+  font-style:italic;
+}
+
+code, pre {
+  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+  font-size:12px;
+}
+
+pre {
+  padding:8px 15px;
+  background: #f8f8f8;
+  border-radius:5px;
+  border:1px solid #e5e5e5;
+  overflow-x: auto;
+}
+
+table {
+  width:100%;
+  border-collapse:collapse;
+}
+
+th, td {
+  text-align:left;
+  padding:5px 10px;
+  border-bottom:1px solid #e5e5e5;
+}
+
+dt {
+  font-weight:700;
+}
+
+img {
+  max-width:100%;
+}
+
+small {
+  font-size:11px;
+  color: $light-color;
+}
+
+hr {
+  border:0;
+  background:#e5e5e5;
+  height:1px;
+  margin:0 0 20px;
+}
+
+footer {
+  width: $leftbox-width;
+  padding-left: $leftbox-left-padding;
+  float:left;
+  position:fixed;
+  bottom:50px;
+}
+
+

@@ -1,0 +1,57 @@
+.leftbox {
+  height: 100%;
+  position: fixed;
+  background-color: $leftbox-bg;
+  color: $light-color;
+  max-width: $leftbox-width;
+  padding-right: $leftbox-right-padding;
+  padding-left: $leftbox-left-padding;
+  padding-top: $leftbox-padding-top;
+
+  p {
+    margin-bottom: 5px;
+  }
+
+  header {
+    ul {
+      list-style:none;
+      height: $icon-container-height;
+      padding: 0;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      text-align: center;
+    }
+
+    li {
+      width: $icon-height;
+      float:left;
+      padding-right: 6px;
+
+      a {
+        font-size: 11px;
+        display: block;
+        text-align: center;
+        padding-top: 6px;
+        height: $icon-height;
+        width: inherit;
+
+        img {
+          height: $icon-height;
+        }
+
+        strong {
+          font-size:14px;
+          display:block;
+        }
+      }
+    }
+  }
+
+  ul {
+    padding-top: 15px;
+    list-style: none;
+    padding-left: 0;
+    font-size: 16px;
+  }
+}
