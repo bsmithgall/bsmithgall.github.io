@@ -124,7 +124,7 @@
               .append('g')
                 .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
-    d3.json('/javascripts/json/charts.json', function(data) {
+    d3.json('/js/json/charts.json', function(data) {
       drawChart(data)
     })
 
