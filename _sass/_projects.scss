@@ -1,8 +1,14 @@
 $project-padding: 10px;
 $project-thumb-max-height: 120px;
+$project-default-width: 360px;
+$project-box-min-width: $project-default-width * 2.5;
 
 .project-box {
-  min-width: 960px;
+  min-width: $project-box-min-width;
+
+  @media screen and (max-width: $smaller-screen) {
+    min-width: 100%;
+  }
 }
 
 .project, .project-thumb {
@@ -14,9 +20,16 @@ $project-thumb-max-height: 120px;
 .project {
   padding: $project-padding;
   margin-right: $project-padding * 2;
-  max-width: 360px;
+  max-width: $project-default-width;
   display: inline-block;
   vertical-align: top;
+
+  @media screen and (max-width: 1020px) {
+    display: block;
+    @media screen and (max-width: $smaller-screen) {
+      max-width: 100%;
+    }
+  }
 
   .project-title {
     background-color: $leftbox-bg;
