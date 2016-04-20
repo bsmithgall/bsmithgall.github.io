@@ -80,7 +80,7 @@ body {
 
   var button = d3.select('button').on('click.reset', reset)
 
-  d3.json('/javascripts/json/nyc-boroughs.topojson', function(error, geo) {
+  d3.json('/js/json/nyc-boroughs.topojson', function(error, geo) {
     var boroughs = geo.objects['nyc-borough-boundaries-polygon'];
 
     var borough = g.selectAll('path')
@@ -91,8 +91,8 @@ body {
                        .attr('d', path)
   });
 
-  d3.json('/javascripts/json/201402_citibike_trips_rels.json', function(error, trips) {
-    d3.json('/javascripts/json/citibike-stations.json', function(error, json) {
+  d3.json('/js/json/201402_citibike_trips_rels.json', function(error, trips) {
+    d3.json('/js/json/citibike-stations.json', function(error, json) {
 
       var stations = g.selectAll('.station')
                           .data(json)
