@@ -81,7 +81,9 @@ for feature in all_parent_features:
 layer.commitChanges
 {% endhighlight %}
 
-Now, after we run this script from the console, we should see the list of districts populated in the proper field.
+Now, after we run this script from the console, we should see the list of districts populated in the
+proper field.
+
 ![Election Districts in the attribute table]({{ site.url }}/images/2014-03-01-attribute-table.png)
 
 The full code that I ending up using is available [at this gist](https://gist.github.com/bsmithgall/9285262).

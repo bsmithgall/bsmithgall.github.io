@@ -121,7 +121,7 @@ Looking at these recommendations, we can see a list a priority list of stations 
 16  396  Lefferts Pl & Franklin Ave        23    25
 </pre>
 
-####Next Steps
+#### Next Steps
 
 Now that the part of the system is complete, there's still a few more things that can be done to make it even better:
 

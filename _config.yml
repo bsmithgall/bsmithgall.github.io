@@ -1,5 +1,5 @@
 name: Ben Smithgall's site
-description: I'm a 2015 Code for America Fellow. I used to do data engineering and analytics for Spotify, and data and digital analytics work for Obama 2012.
+description: I work at the US Digital Service. Previously at Code for America, Spotify, and Obama 2012.
 url: http://bensmithgall.com
 markdown: kramdown
 permalink: /blog/:title
@@ -9,3 +9,4 @@ paginate: 5
 paginate_path: "/blog/page:num"
 future: false
 highlighter: pygments
+gems: [jekyll-paginate]

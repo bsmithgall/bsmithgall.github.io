@@ -4,7 +4,7 @@ title: Comparing the 113th to Previous Congresses
 excerpt: The 113th Congress is on pace to pass the least amount of legislation since the 1950s -- examining Congressional legislative history with the D3 library.
 ---
 
-#####Last updated: 22 October 2013
+##### Last updated: 22 October 2013
 
 So while it looks like the shutdown is [over for now](http://www.nytimes.com/2013/10/17/us/congress-budget-debate.html?hp&_r=0), Congress still has a big [image problem](http://www.gallup.com/poll/165281/congress-job-approval-falls-amid-gov-shutdown.aspx). I was curious if it would be possible to measure the efficiency of Congress as well.
 
@@ -46,4 +46,5 @@ Third Update (22 October):
 Big props to [Jake](https://twitter.com/jcinterrante/), who pointed out that [THOMAS](http://thomas.loc.gov/home/thomas.php) only tracks resolutions going back to the 93rd Congress. I've kept the data above, but grayed the bars that didn't have resolution information.
 
 
-<script src="/javascripts/congress-compare.js"></script>
+<script src="{{ site.url }}/js/d3.v3.min.js"></script>
+<script src="{{ site.url }}/js/congress-compare.js"></script>

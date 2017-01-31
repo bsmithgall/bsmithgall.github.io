@@ -15,10 +15,39 @@ This project involved testing a number of the different [interpolation functions
 A common interpolation function is the 'basis' interpolation function. This is great for drawing smooth graphs -- check out [this example](http://bl.ocks.org/mbostock/3884955), for instance. While basis interpolation draws smooth lines, it does not guarantee that the lines will intersect with the points that make up the line's foundation.
 
 #### Basis interpolation
+
+<div id="basis"></div>
+
+Notice that with basis interpolation, the lines don't pass through the points. For this type of visualization, this isn't the desired behavior.
+
+#### Cardinal interpolation
+
+<div id="cardinal"></div>
+
+Cardinal interpolation is a bit better: it passes through all of the points, but there are still some weaknesses; when a track changes positions rapidly, the line will appear to overcompensate for that. Look for example, in the top right corner.
+
+#### Linear interpolation
+
+<div id="linear"></div>
+
+Linear interpolation, as you might expect, simply connects the points togther. This is certainly the most accurate, if the least stylistically interesting.
+
+#### Cubic interpolation (preserving monotonicity in y)
+
+<div id="monotone"></div>
+
+Cubic monotonous interpolation seems like the best candidate. While it maintains the relative accuracy of the linear interpolation, it has more stylistically interesting curves.
+
+Choosing an interpolation function certainly depends on what the data being displayed are, and if the underlying points are a critical element. In this particular case, we want to display the movement of the line between the different points on the graph, so we can't use the basis interpolation function. Ultimately, I decided to use the **cubic monotonous** function; the rapid rise or fall of a track disrupts cardinal interpolation, and linear interpolation is very choppy and stylistically interesting. Cubic monotonous gives the right balance for this project.
+
+Finally, I also wanted to make the charts interactive, so I added a simple click listener to the SVG circle; clicking it opens an info box on the right with stats about the track and links to the Spotify web player. You can check out a mock up of the fully interactive version [here]({{ site.url }}/projects/spotify-charts.html). Let me know what you think!
+
+
+<script src="{{ site.url }}/js/d3.v3.min.js"></script>
 <script>
 function buildCharts(interpolator) {
     var margin = {top: 40, right: 10, bottom: 40, left: 50},
-        width     = 450 - margin.left - margin.right,
+        width     = 600 - margin.left - margin.right,
         height    = 450 - margin.top - margin.bottom;
 
     var parseDate = d3.time.format('%Y-%m-%d').parse;
@@ -42,22 +71,18 @@ function buildCharts(interpolator) {
 
     var line = d3.svg.line()
                  .interpolate(interpolator)
-                 .x(function(d) { 
-                  return x(d.date); 
+                 .x(function(d) {
+                  return x(d.date);
                 })
                  .y(function(d) { return y(d.rank); });
 
-    // var div = d3.select('#legend').append('div')
-    //     .attr('class', 'tooltip')
-    //     .style('opacity', 0);
-
-    var svg = d3.select('section').append('svg')
-                .attr('wdith', width + margin.left + margin.right)
+    var svg = d3.select('div#' + interpolator).append('svg')
+                .attr('width', width + margin.left + margin.right)
                 .attr('height', height + margin.top + margin.bottom)
               .append('g')
                 .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
-    d3.json('/javascripts/json/charts.json', function(data) {
+    d3.json('/js/json/charts.json', function(data) {
       drawChart(data)
     })
 
@@ -90,8 +115,8 @@ function buildCharts(interpolator) {
                   .attr('class', 'rank')
 
       rank.append('path')
-          .attr('class', function(d) { 
-            return 'line ' + d.data[0].track_class + 'Line'; 
+          .attr('class', function(d) {
+            return 'line ' + d.data[0].track_class + 'Line';
           })
           .attr('d', function(d) { return line(d.data); })
           .style('stroke', function(d) { return color(d.name); });
@@ -136,7 +161,7 @@ function buildCharts(interpolator) {
                       data: [],
                   };
               }
-              
+
               // Add this data to the track
               tracks[track_key].data.push({
                   date: track.date,
@@ -152,7 +177,7 @@ function buildCharts(interpolator) {
         });
       }
       // Now it is in URL -> { name -> String, data -> Array format }
-      
+
       // Now we want to go to [{name -> String, data -> Array }, ...]
       var result = [];
       Object.keys(tracks).forEach(function(url) {
@@ -179,37 +204,10 @@ function buildCharts(interpolator) {
     }
 
 }
+
 buildCharts('basis')
-</script>
-<br />
-
-Notice that with basis interpolation, the lines don't pass through the points. For this type of visualization, this isn't the desired behavior. 
-
-#### Cardinal interpolation
-<script>
-buildCharts('cardinal')
-</script>
-<br />
-
-Cardinal interpolation is a bit better: it passes through all of the points, but there are still some weaknesses; when a track changes positions rapidly, the line will appear to overcompensate for that. Look for example, in the top right corner.
-
-#### Linear interpolation
-<script>
+buildCharts('cardial')
 buildCharts('linear')
-</script>
-<br />
-
-Linear interpolation, as you might expect, simply connects the points togther. This is certainly the most accurate, if the least stylistically interesting.
-
-#### Cubic interpolation (preserving monotonicity in y)
-<script>
 buildCharts('monotone')
+
 </script>
-<br /><br />
-
-Cubic monotonous interpolation seems like the best candidate. While it maintains the relative accuracy of the linear interpolation, it has more stylistically interesting curves.
-
-Choosing an interpolation function certainly depends on what the data being displayed are, and if the underlying points are a critical element. In this particular case, we want to display the movement of the line between the different points on the graph, so we can't use the basis interpolation function. Ultimately, I decided to use the **cubic monotonous** function; the rapid rise or fall of a track disrupts cardinal interpolation, and linear interpolation is very choppy and stylistically interesting. Cubic monotonous gives the right balance for this project.
-
-Finally, I also wanted to make the charts interactive, so I added a simple click listener to the SVG circle; clicking it opens an info box on the right with stats about the track and links to the Spotify web player. You can check out a mock up of the fully interactive version [here]({{ site.url }}/projects/spotify-charts.html). Let me know what you think!
-

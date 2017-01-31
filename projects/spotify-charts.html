@@ -70,7 +70,7 @@
       <div class="title">
         <h4>Spotify Charts</h4>
         <p>The circles represent track positions in a different week. Click on one for more information. <br />
-          For more information about this visualization, read about it <a href="{{ site.url }}/blog/line-graphs-with-d3-interpolate/">here</a></p>
+          For more information about this visualization, read about it <a href="{{ site.url }}/blog/line-graphs-with-d3-interpolate/">here</a>.</p>
       </div>
       <div class="col-md-8" id="graphic">
       </div>
@@ -102,7 +102,8 @@
 
     var xAxis = d3.svg.axis()
                   .scale(x)
-                  .orient('bottom');
+                  .orient('bottom')
+                  .tickFormat(function(d) { return d3.time.format('%b %e \'%y')(d) });
 
     var yAxis = d3.svg.axis()
                   .scale(y)
@@ -143,8 +144,6 @@
 
       var minX = d3.min(data, function (kv) { return d3.min(kv.data, function (d) { return d.date; }) });
       var maxX = d3.max(data, function (kv) { return d3.max(kv.data, function (d) { return d.date; }) });
-      // var minY = d3.min(data, function (kv) { return d3.min(kv.data, function (d) { return d.rank; }) });
-      // var maxY = d3.max(data, function (kv) { return d3.max(kv.data, function (d) { return d.rank; }) });
       var minY = -10
       var maxY = -1
 
@@ -168,7 +167,7 @@
           .enter().append('circle')
           .attr('cx', function(d) { return x(d.date); })
           .attr('cy', function(d) { return y(d.rank); })
-          .attr('r', 5)
+          .attr('r', 6)
           .attr('fill', function(d) { return color(d.name); })
           .attr('class', function(d) { return d.track_class + 'Circle'; })
           .on('click', function(d) {
@@ -181,8 +180,8 @@
           .call(xAxis)
             .selectAll('text')
             .style('text-anchor', 'end')
-            .attr('dx', '-.8em')
-            .attr('dy', '.15em')
+            .attr('dx', '-.5em')
+            .attr('dy', '.16em')
             .attr('transform', function(d) { return 'rotate(-25)'; });;
 
       svg.append('g')
@@ -229,7 +228,7 @@
                   url: track.track_url,
                   cover_art: track.artwork_url,
                   name: track_key,
-                  track_class: track_class.replace(/ /g,'').replace(/ [\,\/#!$%\^&\*;:{}=\-_`~()\'\.]/g,'') // strip out punctuation and spaces
+                  track_class: track_class.replace(/ /g,'').replace(/[ \,\/#!$%\^&\*;:{}=\-_`~()\'\.]/g,'') // strip out punctuation and spaces
               });
           }
         });

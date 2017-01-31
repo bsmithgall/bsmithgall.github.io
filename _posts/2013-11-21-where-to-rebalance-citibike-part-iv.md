@@ -8,7 +8,7 @@ First things first: the rebalancing app is live, and it can be found [here](http
 
 Now that we've [wrapped up]({{ site.url }}/blog/where-to-rebalance-citibike-part-iii/) the script that generates station recommendations for rebalancing, we want to visualize this information to make it more digestible. Unfortunately (or maybe fortunately...), R is not a great language for dealing with browsers. Python, however, offers a variety of lightweight web frameworks that make this problem far less challenging.
 
-####From R to python
+#### From R to python
 
 While R was a great tool for building a prototype, a rewrite in python is hugely beneficial, especially with the ultimate goal of displaying the results as a web app. While a good amount of the logic from the R script rolls over to python without much trouble, I still did have to find libraries to replace `kmeans` (from the stats package in R) and `igraph`. While there is a python build of `igraph`, it requires a C compiler, which we want to avoid for easier deployment later.
 
@@ -68,7 +68,7 @@ def make_recs(graph_output, dist_url):
     return recs
 {% endhighlight %}
 
-####Serving the results as a web app
+#### Serving the results as a web app
 
 Because the current iteration of this doesn't store any data or do any database writing, I decided to deploy the app with [Heroku](http://heroku.com), an awesome service that does some free deployment.
 
@@ -78,7 +78,7 @@ A central component to this visualization was going to be the map. I decided to 
 
 Another big advantage that came from rewriting the script in python was that it made it trivial to look at both empty and full stations, so I decided to display both.
 
-####First impressions and takeaways
+#### First impressions and takeaways
 
 Overall, the relative simplicity of the design showcases the beautiful Mapbox map and lets the information show through fairly clearly. One interesting thing is noticing the way the clusters vary based on time of day. Plugging this system into a predictive system such as the one I've mentioned before would be really interesting.
 

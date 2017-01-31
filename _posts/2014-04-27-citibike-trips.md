@@ -4,15 +4,15 @@ title: OpenVisConf and Citibike Trips
 excerpt: Open Vis Conference and a quick Citibike visualization
 ---
 
-###Open Vis
+### Open Vis
 
 I just got back from the exceptionally well done Open Vis conference which featured a number of truly excellent talks and speakers. If you are interested in data visualization, design, color theory, or a host of other topics, I highly recommend that you watch the [website](http://openvisconf.com) for when the conference videos are posted.
 
-###Visualizing Citibike Trips
+### Visualizing Citibike Trips
 
 Inspired by Open Vis, I thought I'd take a look at the recently posted trip-level data dumps from Citibike, available [here](http://citibikenyc.com/system-data). I decided to take a look at the most recently available month of data. I was mostly curious about the relationships between different stations and seeing how people used the network. Because the data that actually powers the visual is pretty big, I've put it on a [separate page](({{ site.url }}/projects/citibike-trips.html), and have pasted screenshotsin this post instead.
 
-####Top Origins and their destinations
+#### Top Origins and their destinations
 
 In order, the top five stations for trip origins are:
 
@@ -24,7 +24,7 @@ In order, the top five stations for trip origins are:
 
 Let's take a closer look at top origin station.
 
-####Lafayette St & E 8 St
+#### Lafayette St & E 8 St
 
 It's a bit unsurprising that this station is such a common origin station -- it's geographically very central to the station network:
 
@@ -42,7 +42,7 @@ Lafayette's top five destinations are:
 
 This pattern is interesting as well, because it looks as though all of the top destinations for this station are clustered geographically.
 
-####Top Destinations
+#### Top Destinations
 
 Also interesting are the top destination stations. The top five destinations on Citibike are:
 
@@ -54,7 +54,8 @@ Also interesting are the top destination stations. The top five destinations on 
 
 This is very interesting, because it shows that the same stations are both common as destinations and as starting points. This information might be valuable in tinkering with the [Citibike rebalancing project](http://citibike-rebalancing.herokuapp.com).
 
-###Exploring Citibike's Network
+### Exploring Citibike's Network
+
 While these top-level stats are interesting, I also wanted to be able to explore the citibike network and see relatonships between the different stations. I put together [this visualization]({{ site.url }}/projects/citibike-trips.html) of the February Citibike trips to try to explore the data. The code is available [as a gist](https://gist.github.com/bsmithgall/11357135) and on [bl.ocks](http://bl.ocks.org/bsmithgall/11357135).
 
 The Citibike trips data set is fairly comprehensive and interesting. There have already been some really great work done with it, like [this](http://linepointpath.com/111242/2771111/work/citi-bike-visualization) awesome visualization of rides over a 48-hour period. You can get the data [from the Citibike website](http://citibikenyc.com/system-data), and I encourage you to check it out!

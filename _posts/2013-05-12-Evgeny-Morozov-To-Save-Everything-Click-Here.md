@@ -7,7 +7,7 @@ excerpt: Evegency Morozov's New Book is an interesting problemitization of a lot
 
 Evgeny Morozov's new book, "To Save Everything, Click Here" is certainly worth reading, if for no other reason than it occupies a much-needed space in pop-technology books of railing against technology as a solution to every possible problem. In the book, Morozov tackles numerous interesting problems with some current thinking in the technology space. There's too much for me to think about in this post, and so I mostly want to focus on his third chapter, titled "So Open It Hurts" which focuses on open government and open data. He has two primary points that I want to talk about: his discussion of open data/open government as ideology, and the tools and that can result from this open data.
 
-####Government as an Ideology
+#### Government as an Ideology
 
 Thinking about "open government" as an ideology makes a lot of sense for Morozov in the scope of his larger intellectual project. Morozov is concerned primary with what he calls "solutionism," which he defines as:
 
@@ -31,7 +31,7 @@ In response to this, I point to George Packer's [tremendous piece in the New Yor
 
 Generally, though, Morozov's problemitization of transparency as a goal is well taken: it seems wise to consider unexpected consequences of our actions. However, I am a bit more interested in his problemization of the tools that are developed as a result of the open government movements, which I will discuss more below.
 
-####Open Government as a set of tools and infrastructure
+#### Open Government as a set of tools and infrastructure
 
 Morozov spends a good deal of time openly mocking all sorts of useful tools that have been developed as a result of open government movements. He derides "maps and trains" along with "potholes" and writes off people who are interested in making government response times to those complaints better. Morozov does himself and his argument a serious disservice here as he jubilantly points out that the Nazis had great and transparent train data. It's unclear how that changes the inherent usefulness of something like the City of Chicago's [bus tracker](http://www.ctabustracker.com/bustime/home.jsp), but it certainly adds some unnecessary vitroil to the Morozov's point.
 
@@ -41,6 +41,6 @@ I think both of these points are a bit nonsensical and certainly in conflict wit
 
 For the other argument, I think Morozov either ignores or doesn't care about the tremendous amount of good that comes out being able to track service requests. For example, Chicago is a city that has a history of segregation, and along with that many people were conviced that services were (and continue to be) unequally distributed. By tracking and examining the efficiency by which problems are resolved across the city's geography, citizens can, in effect, see demonstratively if this holds true or does not. Projects like the [Open 311](http://www.cityofchicago.org/city/en/depts/311.html) project allow for this sort of good to happen. Additionally, while I understand the problems that Morozov has with, for example, opening crime data, his primary complaint with other service delivery data appears to be that it's boring or somehow not up to some arbitrary standard. Perhaps we have different goals, but I think that in his eagerness to disparage "open government" and "open data," Morozov fails to see the fundamental potential and value of genuinely improved services in cities and municipalities.
 
-####So What?
+#### So What?
 
 There's much more to Morozov's book than I've had the opportunity to talk about here, and I would certainly recommend it. But I do think that he is so eager to make a point and do so in such a triumphant and gloating manner that he throws out the good with the bad. I am concerned, and I think rightly, with projects like eightmaps, but I don't think Morozov does any work, really, to discover what exists that is good in the open government movement. Additionally, he appears to want it both ways: the data that exists is either nothing but a sham in order to buttress open government credentials, or the dataset doesn't provide any value. Morozov does himself a disservice by not examining fully the community that has been developed around open data, the [tools that have been built](http://opencityapps.org/) outside of governments, and the value that this type of public-private collaboration can bring. More thought can and likely should be done around the potential unforseen consequences of what are inherently political actions, but overall Morozov is far too quick to dismiss too much in his argument.
