@@ -8,5 +8,5 @@ rdiscount extensions: [smart]
 paginate: 5
 paginate_path: "/blog/page:num"
 future: false
-highlighter: pygments
+highlighter: rouge
 gems: [jekyll-paginate]
