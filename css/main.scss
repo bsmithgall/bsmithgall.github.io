@@ -6,7 +6,12 @@
 $primary-color: #9AC8F0;
 $leftbox-bg: lighten($primary-color, 15%);
 $link-color: #264E70;
+$text-color: #000000;
 $light-color: #485E70;
+$code-inline-color: #D14;
+$code-inline-background-color: #E8E8E8;
+$code-block-background-color: #F7F7F7;
+
 $overall-padding-top: 25px;
 
 $leftbox-width: 15%;
@@ -26,10 +31,10 @@ $smaller-screen: 800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "pygment_trac",
-        "base",
-        "leftbox",
-        "content",
-        "projects",
-        "charts"
+  "pygment_trac",
+  "base",
+  "leftbox",
+  "content",
+  "projects",
+  "charts"
 ;

@@ -7,12 +7,8 @@ body {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin:0 0 20px;
-}
-
-p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
+h1, h2, h3, h4, h5, h6, p, ul, ol, table, pre, dl {
+  margin: 0 0 20px;
 }
 
 h1, h2, h3 {
@@ -42,23 +38,43 @@ a:hover {
 }
 
 blockquote {
-  border-left:1px solid #e5e5e5;
+  border-left:1px solid $code-inline-background-color;
   margin:0;
   padding:0 0 0 20px;
   font-style:italic;
 }
 
 code, pre {
+  color: $code-inline-color;
+  background: $code-inline-background-color;
   font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
   font-size:12px;
 }
 
+code {
+  padding: 1px 3px;
+  border-radius: 3px;
+}
+
 pre {
-  padding:8px 15px;
-  background: #f8f8f8;
+  padding: 10px;
   border-radius:5px;
-  border:1px solid #e5e5e5;
+  border:1px solid $code-inline-background-color;
   overflow-x: auto;
+
+  code {
+    color: $text-color;
+    padding-left: 0;
+  }
+}
+
+.highlight {
+  background-color: $code-block-background-color;
+
+  code, pre {
+    color: $text-color;
+    background-color: $code-block-background-color;
+  }
 }
 
 table {
@@ -69,7 +85,7 @@ table {
 th, td {
   text-align:left;
   padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
+  border-bottom:1px solid $code-block-background-color;
 }
 
 dt {
@@ -87,7 +103,7 @@ small {
 
 hr {
   border:0;
-  background:#e5e5e5;
+  background:$code-block-background-color;
   height:1px;
   margin:0 0 20px;
 }
@@ -104,9 +120,4 @@ footer {
     width: 100%;
     position: relative;
   }
-
 }
-
-
-
-
