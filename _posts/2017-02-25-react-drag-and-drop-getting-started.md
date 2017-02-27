@@ -6,7 +6,7 @@ excerpt: The examples provided by the [React Drag and Drop](https://github.com/g
 
 As I referenced in my [last post]({{ page.previous.url }}), I am working on a project I'm calling biblio, which is a way for me to track books that I am in the process of reading, have read, and want to get. There are a lot of other things that do this already, so what I'm looking to do is to have a trello-style interface that lets me move cards that represent books between different states easily. Because I'm also looking to do this with new technology as a learning exercise, I am aiming to build this with [React](https://facebook.github.io/react/) on the frontend.
 
-To get the drag-and-drop card functionality, I am using the popular [React Drag and Drop](http://react-dnd.github.io/react-dnd/) higher-order functions to get everything working. I want to walk through the process for getting everything working.
+To get the drag-and-drop card functionality, I am using the popular [React Drag and Drop](http://react-dnd.github.io/react-dnd/) higher-order functions to get everything working. I want to walk through the process I used to get everything working. This assumes that you have some basic knowledge of how React works (I would highly recommend [thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html)).
 
 ### Background -- naming and component structure
 
