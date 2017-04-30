@@ -170,7 +170,7 @@ With everything completed, we should now be able to move works between shelves:
 
 ![Moving around]({{ site.url }}/images/react-dnd/wired-up.gif)
 
-To see the full code, check it out [on Github](https://github.com/bsmithgall/biblio/tree/615f7e59270dc23885967d77541b55fb4e16d6b8)
+To see the full code, check it out [on Github](https://github.com/bsmithgall/biblio/blob/615f7e59270dc23885967d77541b55fb4e16d6b8/client/src/components/works/work.component.js#L69).
 
 There are still a few things that we need to do to finish out this
 functionality:
