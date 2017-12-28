@@ -1,5 +1,5 @@
 name: Ben Smithgall's site
-description: I work at the US Digital Service. Previously at Code for America, Spotify, and Obama 2012.
+description: Software and data at Spotify. Previously with U.S. Digital Service and Code for America.
 url: http://bensmithgall.com
 markdown: kramdown
 permalink: /blog/:title
