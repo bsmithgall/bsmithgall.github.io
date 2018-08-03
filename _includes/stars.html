@@ -1,0 +1,8 @@
+{% assign rating = include.rating | plus: 0 %}
+{% for i in (1..5) %}
+    {% if rating < i %}
+    <p>hello</p>
+    {% else %}
+    <p>world</p>
+    {% endif %}
+{% endfor %}

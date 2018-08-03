@@ -1,0 +1,18 @@
+
+<hr>
+<div class="paginator">
+  <div class="previous">
+    {% if page.previous.url %}
+    Previous Post: <a href="{{ page.previous.url }}">
+      {{ page.previous.title }}
+    </a>
+    {% endif %}
+  </div>
+  <div class="next">
+    {% if page.next.url %}
+    Next Post: <a href="{{ page.next.url }}">
+      {{ page.next.title }}
+    </a>
+    {% endif %}
+  </div>
+</div>

@@ -2,11 +2,10 @@ name: Ben Smithgall's site
 description: Software and data at Spotify. Previously with U.S. Digital Service and Code for America.
 url: http://bensmithgall.com
 markdown: kramdown
-permalink: /blog/:title
+permalink: /:categories/:title
 baseurl: /
 rdiscount extensions: [smart]
 paginate: 5
-paginate_path: "/blog/page:num"
 future: false
 highlighter: rouge
 gems: [jekyll-paginate]
