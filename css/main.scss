@@ -14,8 +14,10 @@ $code-block-background-color: #F7F7F7;
 
 $overall-padding-top: 25px;
 
-$leftbox-width: 15%;
+$leftbox-width: 20%;
 $leftbox-smaller-width: 70%;
+$leftbox-massive-width: 15%;
+
 $leftbox-left-padding: 25px;
 $leftbox-right-padding: 25px;
 $leftbox-padding-top: $overall-padding-top;
@@ -23,11 +25,16 @@ $leftbox-padding-top: $overall-padding-top;
 $content-box-padding: ($leftbox-right-padding + $leftbox-left-padding) / 1.25;
 $content-box-top-padding: $overall-padding-top;
 
+$content-box-width: 70%;
+$content-box-small-width: 90%;
+$content-box-massive-width: 50%;
+
 $icon-height: 24px;
 $icon-container-height: $icon-height * 1.4;
 
 $mobile-screen: 480px;
 $smaller-screen: 800px;
+$massive-screen: 1400px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
@@ -36,5 +43,6 @@ $smaller-screen: 800px;
   "leftbox",
   "content",
   "projects",
-  "charts"
+  "charts",
+  "books"
 ;

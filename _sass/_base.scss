@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
@@ -119,5 +124,6 @@ footer {
     padding-top: 25px;
     width: 100%;
     position: relative;
+    width: $leftbox-smaller-width;
   }
 }

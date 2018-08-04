@@ -12,6 +12,15 @@
     margin-bottom: 5px;
   }
 
+  @media screen and (min-width: $massive-screen) {
+    max-width: $leftbox-massive-width;
+  }
+
+  @media screen and (max-width: $smaller-screen) {
+    position: relative;
+    max-width: 100%;
+  }
+
   header {
     ul {
       list-style:none;
@@ -47,7 +56,6 @@
       }
     }
 
-
     @media screen and (max-width: $smaller-screen) {
       position: relative;
       max-width: $leftbox-smaller-width;
@@ -56,6 +64,7 @@
     @media screen and (max-width: $mobile-screen) {
       max-width: 100%;
     }
+
   }
 
   ul {
@@ -65,9 +74,14 @@
     font-size: 16px;
   }
 
-  @media screen and (max-width: $smaller-screen) {
-    position: relative;
-    max-width: 100%;
-  }
+  div {
+    padding: 10px 0;
 
+    p {
+      @media screen and (max-width: $smaller-screen) {
+        display: inline-block;
+        padding-right: 10px;
+      }
+    }
+  }
 }
