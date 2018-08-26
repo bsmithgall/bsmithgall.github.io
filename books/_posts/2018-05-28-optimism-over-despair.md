@@ -15,4 +15,4 @@ Truly disappointing for a number of reasons:
 3. The interviews are published in a seemingly random order, where one interview might have a wildly divergent topic from the next, but then in the third you will find questions that are almost exactly the same as ones from the first essay;
 4. As a physical object, this book is low quality. There were several type-setting issues that caused columns of text to be misaligned with other columns.
 
-Altogether, this was a fairly lazy and unfortunate attempt at introducing the politics and ideas of Noam Chomsky, someone I think is a very important modern intellectual.
+Altogether, this was a fairly lazy and unfortunate attempt at introducing the politics and ideas of Noam Chomsky.

@@ -9,7 +9,7 @@ excerpt: |
 ---
 
 Last time we talked about Biblio, we had [wired up React Drag and Drop]({%
-post_url 2017-02-25-react-drag-and-drop-getting-started %}) to work correctly a single access.
+post_url /blog/2017-02-25-react-drag-and-drop-getting-started %}) to work correctly a single access.
 In this post, we are going to talk about handling drop events to make sure that
 the dragged item sticks to the correct place.
 

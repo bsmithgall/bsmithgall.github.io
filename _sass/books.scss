@@ -1,3 +1,11 @@
+h2.book-subtitle {
+  margin-bottom: 10px;
+}
+
+h3.book-read-on {
+  font-weight: normal
+}
+
 table.books {
   .booklink {
     text-decoration: underline;
@@ -19,4 +27,8 @@ table.books {
     @media screen and (max-width: $smaller-screen) {
     }
   }
+}
+
+div.book-rating {
+  margin-bottom: 15px;
 }

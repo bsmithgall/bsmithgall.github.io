@@ -36,6 +36,11 @@ $mobile-screen: 480px;
 $smaller-screen: 800px;
 $massive-screen: 1400px;
 
+$font-size-standard: 14px;
+$font-size-large: 28px;
+$font-size-callout: 16px;
+$font-size-small: 10px;
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
   "pygment_trac",
