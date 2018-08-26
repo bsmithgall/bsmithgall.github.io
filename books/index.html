@@ -1,0 +1,24 @@
+---
+layout: page
+title: Books
+---
+<h1>Books</h1>
+<table class="books">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Rating</th>
+  </thead>
+  <tbody>
+    {% for book in site.categories.books %}
+    <tr>
+      <td style="white-space: nowrap;">{{ book.date | date: '%Y-%m-%d' }}</td>
+      <td><a class="booklink" href="{{ book.url }}">{{ book.title }}</a></td>
+      <td>{{ book.author }}</td>
+      <td>{% include stars.html rating=book.rating %}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

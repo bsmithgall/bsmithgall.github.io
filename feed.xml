@@ -10,6 +10,7 @@
     {% for post in site.posts limit:10 %}
     <item>
       <title>{{ post.title }}</title>
+      <category>{{ post.category }}</category>
       <description>{{ post.content | xml_escape }}</description>
       <pubDate>{{ post.date | date: "%a, %d %b %Y" }}</pubDate>
       <link>{{ site.url }}/{{ post.url }}</link>

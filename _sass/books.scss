@@ -1,0 +1,34 @@
+h2.book-subtitle {
+  margin-bottom: 10px;
+}
+
+h3.book-read-on {
+  font-weight: normal
+}
+
+table.books {
+  .booklink {
+    text-decoration: underline;
+  }
+
+  tr {
+    @media screen and (max-width: $smaller-screen) {
+      td:first-of-type {
+        display: none;
+      }
+
+      th:first-of-type {
+        display: none
+      }
+    }
+  }
+
+  td {
+    @media screen and (max-width: $smaller-screen) {
+    }
+  }
+}
+
+div.book-rating {
+  margin-bottom: 15px;
+}

@@ -1,0 +1,16 @@
+---
+layout: layout
+---
+
+<h1 class="book-title">{{ page.title }}</h1>
+<h2 class="book-subtitle">By {{ page.author }}{% unless page.additional_authors == "" %} (with {{ page.additional_authors }}){% endunless %}</h2>
+<h3 class="book-read-on">Read on {{ page.date | date: '%B %e, %Y' }}</h3>
+
+{{ content }}
+
+<div class="book-rating">
+  {% include stars.html rating=page.rating %}
+</div>
+
+{% include pagination.html %}
+
