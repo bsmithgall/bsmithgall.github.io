@@ -21,7 +21,7 @@ money that separates the two of them from the wealthy: they both struggle with
 realizing that there is some ease or confidence that those above them in the
 social classes seem to have.
 
-Beyond this, Elena cannot really escape the pull of the <em>stradone</em> and of
+Beyond this, Elena cannot really escape the pull of the *stradone* and of
 Lila's influence, which pull back from her studies &em; Elena often finds
 herself attempting to replicate her friends' actions. Even when they spend
 significant time apart, Elena finds herself and her emotions bound up by what
