@@ -7,7 +7,7 @@ rating: "5"
 date_read: "2019-03-14"
 ---
 
-*The Name of the Rose* is an absolutely wonderful book, much like [Foucoult's
+*The Name of the Rose* is an absolutely wonderful book, much like [Foucault's
 Pendulum](books/foucaults-pendulum) it mixes in brilliant, beautiful insight
 with long passages of absolutely impenetrable discurses on 14th century abbey
 organization and semiotics. It's hard to know if Eco is a genius or a madman, or
