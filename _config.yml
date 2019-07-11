@@ -1,6 +1,6 @@
 title: Ben Smithgall's site
 description: Software and data at Spotify. Previously with U.S. Digital Service and Code for America.
-url: http://bensmithgall.com
+url: https://bensmithgall.com
 markdown: kramdown
 permalink: /:categories/:title
 baseurl: /
