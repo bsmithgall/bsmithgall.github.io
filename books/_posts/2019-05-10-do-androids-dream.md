@@ -12,11 +12,11 @@ work is around what is and is not real and true. In this case, he is most
 concerned with the edge between humanity and computers. This is an especially
 interesting debate today. For Dick, at least in this book, the primary concern
 is about empathy: what divides humans from machines is the speed of an empathic
-response. 
+response.
 
 Of course, this is all tremendously complicated by the fact that there are
 people whose exposure to the toxic fallout of post-apocalyptic Los Angeles make
-them fail the tests that are used for androids. In *Do Androids Dream*, Dick
+them fail the tests that are used for androids. In _Do Androids Dream_, Dick
 points out that these characters are in fact not human, labeled as "specials" by
 those who can still pass the tests. Additionally, the robot manufacturing
 companies in the book continue to churn out new models that force the tests to
@@ -33,4 +33,3 @@ purpose), or the "empathy box" which you use to gain collective transcendental
 religious experience. These little ideas wrapped in objects can be very
 thought-provoking and often prophetic. How dissimilar are these imagined objects
 from forms and functions of modern consumer electronics?
-
