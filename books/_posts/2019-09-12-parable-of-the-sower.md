@@ -7,7 +7,7 @@ date_read: "2019-09-12"
 ---
 
 It's funny to have read this immediately on the heels of
-[_Fall_](/books/dodge.md), because the worlds that they start from don't
+[_Fall_](/books/dodge), because the worlds that they start from don't
 actually sound that different from each other. What separates them, though, is
 who Stephenson and Butler focus on, and how those characters create and realize
 change. For Stephenson, the interesting people are those who have enough money
