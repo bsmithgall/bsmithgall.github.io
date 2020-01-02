@@ -1,9 +1,9 @@
 ---
 layout: book
-title: "Neuromancer"
+title: "The Sprawl Trilogy"
 author: "William Gibson"
 rating: "4"
-date_read: "2019-12-20"
+date_read: "2019-12-28"
 ---
 
 I was inspired to re-read _Neuromancer_ after reading this [absolutely bonkers
@@ -61,3 +61,20 @@ In any case _Neuromancer_ is a fun book, and still applicable to our world
 despite its differences. I'm looking forward to reading Gibson's newest series
 after reading that profile of him, and seeing how he has shaped the world around
 us still.
+
+---
+
+After finishing _Neuromancer_, I took the time over the break to re-read the two
+other books in the so-called _Sprawl Trilogy_, _Count Zero_ and _Mona Lisa
+Overdrive_. There are interesting bits cast throughout these books. One of the
+most interesting concepts in _Count Zero_ is the notion that extreme wealth is
+has its own sovereignty and even confers its own citizenship to the small army
+of lawyers and managers who look after it. This is another point where Gibson
+seems to anticipate or even bring around reality: Josef Virek attempts to escape
+death; his consciousness is uploaded into a giant set of vats in Sweden, and he
+has many corporeal forms in the "simstim" VR-like entertainment. This doesn't
+match fully but surely rhymes with the way that Google's executives are looking
+to ["cure
+death"](https://www.theverge.com/2013/9/19/4748594/understanding-calico-larry-page-google-ventures-and-the-quest-for)
+as they age.
+
