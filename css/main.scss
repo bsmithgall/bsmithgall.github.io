@@ -43,11 +43,11 @@ $font-size-small: 10px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-  "pygment_trac",
   "base",
   "leftbox",
   "content",
   "projects",
   "charts",
-  "books"
+  "books",
+  "pygment_trac"
 ;

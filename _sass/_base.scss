@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 html, body {
   width: 100%;
@@ -52,7 +53,7 @@ blockquote {
 code, pre {
   color: $code-inline-color;
   background: $code-inline-background-color;
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+  font-family: 'Source Code Pro', monospace;
   font-size: $font-size-standard;
 }
 
