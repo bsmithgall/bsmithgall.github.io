@@ -37,6 +37,10 @@ a {
     display:block;
   }
 
+  > code {
+    text-decoration: underline;
+  }
+
 }
 
 a:hover {
