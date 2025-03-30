@@ -172,7 +172,7 @@ pin 2, and then a wire from the arduino ground pin to the "common" terminal on
 the button. Here's what that looks like all wired up (sorry for the extremely
 blurry photo):
 
-![Wired up](../../images/a-big-button/wired-up.png)
+![Wired up](../../images/a-big-button/wired-up.jpg)
 
 One note here is that the button itself has an LED on it, so if you were
 interested you could also wire in some LED stuff but I just didn't in the end.
