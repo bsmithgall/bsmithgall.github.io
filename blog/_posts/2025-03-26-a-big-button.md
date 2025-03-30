@@ -180,11 +180,11 @@ interested you could also wire in some LED stuff but I just didn't in the end.
 I was also very lucky to get a beautiful wooden enclosure built and stained by
 my wonderful and talented father.
 
-![The electronics in their enclosure](../../images/a-big-button/enclosed.png)
+![The electronics in their enclosure](../../images/a-big-button/enclosed.jpg)
 
 And here it is all finished:
 
-![Da button](../../images/a-big-button/da-button.png)
+![Da button](../../images/a-big-button/da-button.jpg)
 
 # Recap
 
